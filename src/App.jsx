@@ -1,5 +1,4 @@
-// App.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { NavBar } from './components/NavBar'
 import { Propos } from './pages/Propos'
@@ -9,9 +8,8 @@ import { Service } from './pages/Service'
 
 function App() {
   return (
-    <BrowserRouter>
-          <NavBar />
-
+    <>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
@@ -19,7 +17,7 @@ function App() {
         <Route path="/propos" element={<Propos />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </>
   )
 }
 
