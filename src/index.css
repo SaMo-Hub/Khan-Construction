@@ -6,5 +6,6 @@
 
 @theme {
   --font-inter: "Inter", sans-serif; 
-  --color-primary:#084527
+  --color-primary:#084527;
+  --color-secondary:#FFB53B;
 }
