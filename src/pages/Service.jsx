@@ -34,20 +34,20 @@ export const Service = () => {
   ];
   return (
     <div className="text-[#084527] pb-36 tracking-tight  bg-[#F5F5F0] ">
-      <header className="flex justify-center py-36">
-        <h1 className="text-6xl text-center w-2/5 tracking-tighter font-bold">
+      <header className="flex justify-center py-12 md:py-36">
+        <h1 className="md:text-6xl text-4xl text-center md:w-2/5 tracking-tighter font-bold">
           Constructions de
           <span className="text-secondary"> maisons neuves</span>
         </h1>
       </header>
-      <section className="bg-white grid grid-cols-[1.5fr_1fr] items-center p-20 gap-20">
-        <img src={imgSrc} alt="" />
-        <div className="gap-8 flex flex-col">
+      <section className="bg-white flex flex-col md:grid grid-cols-[1.5fr_1fr] items-center p-8 md:p-20 gap-10 md:gap-20">
+        <img src={imgSrc} alt="" className="order-2 " />
+        <div className="gap-8 order-1 flex flex-col">
           <div className="flex flex-col gap-2">
             <h3 className="uppercase font-semibold mb-2">
               ce que nous offrons
             </h3>
-            <h2 className="tracking-tighter font-bold text-4xl">
+            <h2 className="tracking-tighter font-bold text-3xl md:text-4xl">
               La qualité à chaque étape du processus
             </h2>
           </div>
@@ -61,10 +61,10 @@ export const Service = () => {
           </p>
         </div>
       </section>
-      <section className=" px-20 py-36  ">
+      <section className="px-8 md:px-20 py-36  ">
         <div>
           <h3 className="uppercase font-semibold mb-2">ce que nous offrons</h3>
-          <h2 className=" w-2/5 tracking-tighter font-bold text-4xl mb-32">
+          <h2 className="text-3xl md:text-4xl md:w-2/5 tracking-tighter font-bold  mb-32">
             Nous fournissons
             <span className="text-secondary">
               {" "}
@@ -72,7 +72,7 @@ export const Service = () => {
             </span>
           </h2>
         </div>
-        <div className="grid grid-cols-3 gap-x-20 gap-y-28">
+        <div className="grid md:grid-cols-3 gap-x-20 gap-y-28">
           {offres.map((item, index) => (
             <div id={index} className="flex gap-4">
               <div className="w-2 h-7 relative top-[68px] bg-primary"></div>
@@ -89,18 +89,18 @@ export const Service = () => {
           ))}
         </div>
       </section>
-      <section className="px-20 py-36">
+      <section className="px-8 md:px-20 py-36">
         <h2 className="text-center tracking-tighter font-bold text-4xl mb-32">
           Dernières constructions
           <span className="text-secondary">
             <br /> de maisons neuves
           </span>
         </h2>
-        <div className="grid grid-cols-12 gap-4 auto-rows-[400px]">
+        <div className="grid  md:grid-cols-12 gap-4 md:auto-rows-[400px]">
           {images.map((img, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden ${img.colSpan} ${img.rowSpan}`}
+              className={`relative overflow-hidden md:${img.colSpan} md:${img.rowSpan}`}
             >
               <img
                 src={img.src}
@@ -111,14 +111,14 @@ export const Service = () => {
           ))}
         </div>
       </section>
-      <section className="bg-white  mx-20 px-18 py-20 gap-20 grid grid-cols-2">
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-7">
+      <section className="bg-white gap-8 flex flex-col mx-8 md:mx-20 p-10 md:px-18 md:py-20 md:gap-20 md:grid grid-cols-2">
+        <div className="flex flex-col gap-6 md:gap-12">
+          <div className="flex flex-col gap-5 md:gap-7">
             <div className="flex flex-col gap-2">
               <h3 className="uppercase font-semibold mb-2">
                 ce que nous offrons
               </h3>
-              <h2 className="font-bold text-5xl">
+              <h2 className="font-bold text-3xl md:text-5xl">
                 Commençons votre projet ensemble, obtenez un devis gratuit dès
                 aujourd'hui
               </h2>

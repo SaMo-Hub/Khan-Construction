@@ -38,14 +38,14 @@ export const Contact = () => {
 
   return (
     <div className="text-[#084527] font-inter bg-[#F5F5F0] pb-32">
-      <header className="flex justify-center py-36">
-        <h1 className="text-6xl text-center tracking-tighter font-bold">
+      <header className="flex justify-center py-12 md:py-36">
+        <h1 className="mx-12 text-4xl md:text-6xl text-center tracking-tighter font-bold">
           Vous avez des questions ?
           <span className="text-secondary"> <br /> Contactez-nous</span>
         </h1>
       </header>
 
-      <section className="p-20">
+      <section className="py-12 md:py-36 px-8 md:px-20">
         <form onSubmit={handleSubmit} className="gap-6 max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between">
             {/* Nom & Email */}

@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
-import { Home } from './pages/Home'
 import { NavBar } from './components/NavBar'
 import { Propos } from './pages/Propos'
 import { Projet } from './pages/Projet'
 import { Contact } from './pages/Contact'
 import { Service } from './pages/Service'
 import { Footer } from './components/Footer'
+import { Home } from './pages/Home'
 
 function App() {
   return (

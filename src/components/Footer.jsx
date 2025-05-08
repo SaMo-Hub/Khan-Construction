@@ -3,8 +3,8 @@ import logo from "../assets/logoTypo.svg";
 import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
-    <div className="font-inter flex-col flex  gap-12 bg-[#00190D] p-20 text-white ">
-      <div className="flex justify-between gap-20 ">
+    <div className="font-inter flex-col flex  gap-12 bg-[#00190D] p-8 md:p-20 text-white ">
+      <div className="flex md:flex-row flex-col justify-between gap-20 ">
         <div className="flex flex-col gap-4">
           <img src={logo} alt="" />
           <p>Construire des rêves, une brique à la fois.</p>
@@ -34,9 +34,9 @@ export const Footer = () => {
         </div>
       </div>
       <hr className="border-dashed text-white/20 border" />
-      <div className="flex justify-between">
+      <div className="flex md:flex-row flex-col md:gap-0 gap-4 justify-between">
         <p cl>© KhanContruction, Inc. 2025</p>
-        <div className="flex gap-4">
+        <div className="md:flex-row flex-col flex gap-4">
           <Link>Politique de confidentialité</Link>
           <Link>Conditions générales </Link>
         </div>
