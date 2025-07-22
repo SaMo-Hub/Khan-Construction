@@ -26,22 +26,22 @@ export const Etape = () => {
         <span className="text-[#FFB53B] ">des résultats exceptionnels.</span>
       </h2>
 
-      <div className="grid md:grid-cols-[1.5fr_1fr] gap-20 h-full items-center">
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-20 h-full items-center">
         <img
-          className="w-[708px] colspan-2 h-[708px] object-cover  "
+          className="h-full colspan-2  object-cover  "
           src={imgSrc}
           alt=""
         />
 
         {/* <div className="w-[708px] h-[708px] bg-black  "></div> */}
-        <div className="flex flex-col  gap-16">
+        <div className="flex flex-col w-full gap-16">
           {etapeList.map((item, index) => (
             <div
               id={index}
               onClick={() => toggleEtape(index)}
-              className="flex flex-col gap-4"
+              className="flex w-full flex-col gap-4"
             >
-              <div className="flex items-center gap-4">
+              <div className="w-ful flex items-center gap-4">
                 <div className="w-[30px] h-[30px] bg-primary/20 rounded-full "></div>
                 <p className="text-xl font-semibold">{item.title} </p>
               </div>

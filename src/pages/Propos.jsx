@@ -1,28 +1,35 @@
 import React from "react";
 import imgSrc from "../../img.png";
 import { Button } from "../components/Button";
+import notrehistoirepng from '/public/img/notrehistoire.png'
+import construction from '/public/img/construction.png'
+import consultation from '/public/img/consultation.png'
+import devis from '/public/img/devis.png'
 
 export const Propos = () => {
   const etapeList = [
     {
+      img: consultation,
       title: "Consultation gratuite",
       paragraphe:
         "Nous initions le processus par une consultation approfondie pour comprendre votre vision et vos objectifs.",
     },
     {
-      title: "Consultation gratuite",
+      img: devis,
+      title: "Devis détaillé",
       paragraphe:
-        "Nous initions le processus par une consultation approfondie pour comprendre votre vision et vos objectifs.",
+        "Nous élaborons un plan de votre projet, décrivant les phases de construction, les délais et les coûts."
     },
     {
-      title: "Consultation gratuite",
+      img: construction,
+      title: "Construction et exécution",
       paragraphe:
-        "Nous initions le processus par une consultation approfondie pour comprendre votre vision et vos objectifs.",
+      "Constituez une équipe de gestion de projet expérimentée pour superviser le processus de construction."
     },
   ];
 
   return (
-    <div className="text-[#084527] bg-[#F5F5F0]">
+    <div className="text-[#084527] py-[66px] bg-[#F5F5F0]">
       <header className="flex justify-center py-12 md:py-36">
         <h1 className="md:text-6xl text-4xl text-center w tracking-tighter font-bold">
           Créer des espaces <br /> avec
@@ -56,7 +63,7 @@ export const Propos = () => {
           </div>
           <Button text={"Demander un devis"} />
         </div>
-        <img src={imgSrc} className="h-full object-cover" alt="" />
+        <img src={notrehistoirepng} className="h-full object-cover" alt="notre histoire" />
       </section>
       <section className="px-8 md:px-20 py-12 md:py-36">
         <h2 className="tracking-tighter mb-10 md:mb-32 font-bold text-3xl md:text-4xl  md:w-2/5 ">
@@ -66,15 +73,15 @@ export const Propos = () => {
             un processus en 3 étapes simples{" "}
           </span>
         </h2>
-        <div className="grid gap-10 grid-cols-1 md:grid-cols-3">
+        <div className="grid gap-10 grid-cols-1 lg:grid-cols-3">
           {etapeList.map((item, index) => (
             <div className="flex flex-col bg-white border-2 border-primary/40 border-dashed gap-7 p-8">
-              <img src={imgSrc} alt="" />
+              <img src={item.img} alt={item.img} />
               <div className="flex gap-4 font-semibold items-center">
                 <div className="text-white bg-primary rounded-full h-7 w-7 justify-center items-center flex">
                   {index + 1}
                 </div>
-                <h4>{item.title} </h4>
+                <h4 className="text-xl">{item.title} </h4>
               </div>
               <p>{item.paragraphe}</p>
             </div>

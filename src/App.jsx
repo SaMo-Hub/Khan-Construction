@@ -6,10 +6,11 @@ import { Contact } from './pages/Contact'
 import { Service } from './pages/Service'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
+import { LenisProvider } from './components/LenisProvider'
 
 function App() {
   return (
-    <>
+    <LenisProvider>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,8 +19,8 @@ function App() {
         <Route path="/propos" element={<Propos />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer/>
-    </>
+      <Footer />
+    </LenisProvider>
   )
 }
 

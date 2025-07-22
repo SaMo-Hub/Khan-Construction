@@ -11,7 +11,7 @@ export const Projet = () => {
       { src: imgSrc, colSpan: "col-span-7", rowSpan: "row-span-1" },
     ];
   return (
-    <div className='text-[#084527] bg-[#F5F5F0]'>
+    <div className='text-[#084527] py-[66px] bg-[#F5F5F0]'>
       <header className="flex justify-center py-12 md:py-36">
         <h1 className="text-4xl md:text-6xl text-center md:w-2/5 tracking-tighter font-bold">
           Certains de nos derniers

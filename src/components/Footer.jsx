@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/logoTypo.svg";
+// import logo from "../assets/logoTypo.svg";
+import logo from "/public/img/logotypowhite.svg";
 import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
