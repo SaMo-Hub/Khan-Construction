@@ -1,14 +1,16 @@
 import React from "react";
-import imgProjet1 from "/img/Project/Projet1"
-import imgProjet2 from "/img/Project/Projet2"
-import imgProjet3 from "/img/Project/Projet3"
-import imgProjet4 from "/img/Project/Projet4"
-import imgProjet5 from "/img/Project/Projet5"
-import imgProjet6 from "/img/Project/Projet6"
+import imgProjet1 from "/public/img/Project/Projet1.png"
+import imgProjet2 from "/img/Project/Projet2.png"
+import imgProjet3 from "/img/Project/Projet3.png"
+import imgProjet4 from "/img/Project/Projet4.png"
+import imgProjet5 from "/img/Project/Projet5.png"
+import imgProjet6 from "/img/Project/Projet6.png"
 import { Button } from "../components/Button";
 import clsx from "clsx";
-import qualiteachaqueprocessus from '/public/img/Project/qualiteachaqueprocessus.png'
-import contactez from '/public/img/Project/Contactez-nous.png'
+import qualiteachaqueprocessus from "/public/img/Service/qualiteachaqueprocessus.png"
+import contactez from '/public/img/Service/Contactez-nous.png'
+import { useLocation } from "react-router-dom";
+import { serviceList } from "../list";
 
 
 export const Service = () => {
@@ -82,16 +84,22 @@ export const Service = () => {
 "Notre équipe s'engage à livrer votre nouvelle maison dans les délais et dans le budget convenu, sans compromettre la qualité ou le savoir-faire."
     },
   ];
+
+  const currentPath = useLocation().pathname;
+  const selectedService = serviceList.find(service => service.path === currentPath);
+
+  console.log(selectedService);
+  
+
   return (
     <div className="text-[#084527] py-[66px] pb-36 tracking-tight  bg-[#F5F5F0] ">
       <header className="flex justify-center py-12 md:py-36">
         <h1 className="md:text-6xl text-4xl text-center md:w-2/5 tracking-tighter font-bold">
-          Constructions de
-          <span className="text-secondary"> maisons neuves</span>
+          {selectedService.title}
         </h1>
       </header>
       <section className="bg-white flex flex-col md:grid grid-cols-[1.5fr_1fr] items-center p-8 md:p-20 gap-10 md:gap-20">
-        <img src={qualiteachaqueprocessus} alt="Qualité du service" className="order-2 w-full md:order-1 " />
+        <img src={selectedService.img} alt="Qualité du service" className="order-2 w-full md:order-1 " />
         <div className="gap-8 order-1 flex flex-col">
           <div className="flex flex-col gap-2">
             <h3 className="uppercase font-semibold mb-2">
@@ -140,7 +148,7 @@ export const Service = () => {
         </div>
       </section>
       <section className="px-8 md:px-20 py-36">
-        <h2 className="text-center tracking-tighter font-bold text-4xl mb-32">
+      <h2 className=" text-center text-3xl md:text-5xl  tracking-tighter font-bold mb-32">
           Dernières constructions
           <span className="text-secondary">
             <br /> de maisons neuves
@@ -185,7 +193,7 @@ export const Service = () => {
           </div>
           <Button text={"Demander un devis"} />
         </div>
-        <img src={contactez} alt="" />
+        {/* <img src={contactez} alt="" /> */}
       </section>
     </div>
   );

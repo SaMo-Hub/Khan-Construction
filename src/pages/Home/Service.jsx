@@ -1,5 +1,4 @@
 import React from "react";
-import imgSrc from "../../../img.png";
 
 export const Service = () => {
   const serviceList = [

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import imgSrc from "../../img.png";
+
 import { Button } from "../components/Button";
 import { Header } from "./Home/Header";
 import { Service } from "./Home/Service";
@@ -15,17 +15,19 @@ export const Home = () => {
 
 
   return (
-    <div className="font-inter pt-[66px] tracking-tight text-[#084527] pb-20 bg-[#F5F5F0] ">
-      <Header/>
+    <div className="font-inter pt-[66px] tracking-tight text-[#084527] bg-[#F5F5F0] ">
+       <Header/>
       <hr className="border border-dashed border-[#00000037]" />
-      <Etape/>
+     {/* <Etape/> */}
       <hr className="border border-dashed border-[#00000037]" />
       <Projet/>
       <hr className="border border-dashed border-[#00000037]" />
       <Avis/>
-      <Faq/> 
+      <hr className="border border-dashed border-[#00000037]" />
+      <Faq/>  
     {/*  <Service/>
       */}
+      <hr className="border border-dashed border-[#00000037]" />
       
     
       <CommencezVotreprojet/>

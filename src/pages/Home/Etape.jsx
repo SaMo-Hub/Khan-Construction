@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import imgSrc from "../../../img.png";
+// import imgSrc from "../../../img.png";
 
 export const Etape = () => {
     const [etapeOpenIndex, setetapeOpenIndex] = useState(0);
@@ -29,7 +29,7 @@ export const Etape = () => {
       <div className="grid md:grid-cols-2 gap-12 lg:gap-20 h-full items-center">
         <img
           className="h-full colspan-2  object-cover  "
-          src={imgSrc}
+          src={"imgSrc"}
           alt=""
         />
 

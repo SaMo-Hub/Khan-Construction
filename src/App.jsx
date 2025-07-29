@@ -10,17 +10,21 @@ import { LenisProvider } from './components/LenisProvider'
 
 function App() {
   return (
-    <LenisProvider>
+    <div className='bg-[#F5F5F0]'>
+
+    <LenisProvider >
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/service/:serviceName" element={<Service />} /> {/* Dynamic Service Page */}
         <Route path="/projet" element={<Projet />} />
         <Route path="/propos" element={<Propos />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </LenisProvider>
+    </div>
   )
 }
 

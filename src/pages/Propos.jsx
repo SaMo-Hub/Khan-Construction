@@ -1,10 +1,10 @@
 import React from "react";
-import imgSrc from "../../img.png";
+
 import { Button } from "../components/Button";
-import notrehistoirepng from '/public/img/notrehistoire.png'
-import construction from '/public/img/construction.png'
-import consultation from '/public/img/consultation.png'
-import devis from '/public/img/devis.png'
+import notrehistoirepng from '/public/img/APropos/notrehistoire.png'
+import construction from '/public/img/APropos/construction.png'
+import consultation from '/public/img/APropos/consultation.png'
+import devis from '/public/img/APropos/devis.png'
 
 export const Propos = () => {
   const etapeList = [
